@@ -24,7 +24,7 @@ jobs:
       - name: 📦 Restore Dependencies
         run: dotnet restore backend/
 
-      - name: 🛡️ Security: NuGet Vulnerability Check
+      - name: 🛡️ Security - NuGet Vulnerability Check
         # Native .NET security audit for compromised packages
         run: dotnet list backend/ package audit
 
@@ -55,7 +55,7 @@ jobs:
           cd frontend
           npm ci
 
-      - name: 🛡️ Security: npm Audit
+      - name: 🛡️ Security - npm Audit
         # Checks node_modules/PrimeNG ecosystem for vulnerabilities
         run: |
           cd frontend
