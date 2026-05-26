@@ -1,11 +1,11 @@
-# 🚀 Full-Stack Team Challenge
+# 🚀 Full-Stack Team Challenge: Item Booking System
 
 [![MIT License](https://img.shields.io/badge/License-MIT-green.svg)](https://opensource.org/licenses/MIT)
 [![Angular](https://img.shields.io/badge/Angular-18+-DD0031?style=flat&logo=angular&logoColor=white)](https://angular.dev/)
 [![.NET](https://img.shields.io/badge/.NET-8.0-512BD4?style=flat&logo=dotnet&logoColor=white)](https://dotnet.microsoft.com/)
 [![Built With PrimeNG](https://img.shields.io/badge/UI-PrimeNG-4B0082?style=flat)](https://primeng.org/)
 
-[Add description] 
+[Add description]
 
 [🔗 Live Demo Link] | [🌐 API Documentation] | [🐛 Report a Bug]
 
@@ -13,10 +13,10 @@
 
 ## ✨ Features
 
-*   **🔒 Secure Authentication:** JWT-based user login, registration, and role-based access control (RBAC).
-*   **📅 Dynamic Booking Engine:** Real-time availability validation to completely eliminate double-bookings.
-*   **🎨 Responsive UI:** Built from the ground up using PrimeNG presets and PrimeFlex for flawless mobile and desktop views.
-*   **📊 Admin Dashboard:** Comprehensive analytics, user moderation tools, and item inventory management.
+- **🔒 Secure Authentication:** JWT-based user login, registration, and role-based access control (RBAC).
+- **📅 Dynamic Booking Engine:** Real-time availability validation to completely eliminate double-bookings.
+- **🎨 Responsive UI:** Built from the ground up using PrimeNG presets and PrimeFlex for flawless mobile and desktop views.
+- **📊 Admin Dashboard:** Comprehensive analytics, user moderation tools, and item inventory management.
 
 ---
 
@@ -25,28 +25,29 @@
 Detail the core ecosystem. This proves to technical recruiters that you know how your tools fit together.
 
 ### Frontend
-*   **Core:** Angular 18+ (Signals, Standalone Components)
-*   **UI Components:** PrimeNG & PrimeIcons
-*   **State & Styling:** RxJS & PrimeFlex
+
+- **Core:** Angular 18+ (Signals, Standalone Components)
+- **UI Components:** PrimeNG & PrimeIcons
+- **State & Styling:** RxJS & PrimeFlex
 
 ### Backend
-*   **API:** ASP.NET Core Web API (Clean Architecture / Onion Architecture)
-*   **Database & ORM:** Entity Framework Core with [SQL Server / PostgreSQL / SQLite]
-*   **Security:** ASP.NET Core Identity & JWT Bearer Tokens
+
+- **API:** ASP.NET Core Web API (Clean Architecture / Onion Architecture)
+- **Database & ORM:** Entity Framework Core with [SQL Server / PostgreSQL / SQLite]
+- **Security:** ASP.NET Core Identity & JWT Bearer Tokens
 
 ### Architecture Diagram
 
-```
-
+```text
 ┌─────────────────┐       HTTPS / JSON       ┌─────────────────────┐
 │   Angular UI    │ <──────────────────────> │ ASP.NET Core Web API│
 │   (PrimeNG)     │       (JWT Auth)         │ (Controllers/DTOs)  │
 └─────────────────┘                          └──────────┬──────────┘
-│ EF Core
-▼
-┌─────────────────────┐
-│  Database Instance  │
-└─────────────────────┘
+                                                        │ EF Core
+                                                        ▼
+                                             ┌─────────────────────┐
+                                             │  Database Instance  │
+                                             └─────────────────────┘
 
 ```
 
@@ -59,13 +60,15 @@ Follow these step-by-step instructions to get a local copy of the project up and
 ### 📋 Prerequisites
 
 List the software and versions required to build the project.
-*   [Node.js](https://nodejs.org/) (v18.x or higher)
-*   [.NET 8.0 SDK](https://dotnet.microsoft.com/download/dotnet/8.0)
-*   An IDE of choice ([VS Code](https://code.visualstudio.com/) or [Visual Studio](https://visualstudio.microsoft.com/))
+
+- [Node.js](https://nodejs.org/) (v18.x or higher)
+- [.NET 8.0 SDK](https://dotnet.microsoft.com/download/dotnet/8.0)
+- An IDE of choice ([VS Code](https://code.visualstudio.com/) or [Visual Studio](https://visualstudio.microsoft.com/))
 
 ### 🔧 Installation & Configuration
 
 #### 1. Clone the Repository
+
 ```bash
 git clone [https://github.com/yourusername/your-repo-name.git](https://github.com/yourusername/your-repo-name.git)
 cd your-repo-name
@@ -77,7 +80,7 @@ cd your-repo-name
 Navigate to your backend directory, configure settings, and spin up the server:
 
 ```bash
-cd backend/YourProject.Api
+cd backend
 
 # Restore Nuget packages
 dotnet restore
@@ -90,7 +93,7 @@ dotnet run
 
 ```
 
-> 💡 **Note:** The backend API will boot up locally at `https://localhost:7001`. You can access the Interactive Swagger documentation at `https://localhost:7001/swagger`.
+> 💡 **Note:** The backend API will boot up locally at `http://localhost:5118`. You can access the Interactive Swagger documentation at `http://localhost:5118/swagger`.
 
 #### 3. Frontend Setup (`/frontend`)
 
@@ -99,8 +102,8 @@ Open a new terminal window, navigate to your frontend directory, and run the cli
 ```bash
 cd frontend
 
-# Install exact npm dependencies
-npm install
+# Install exact npm dependencies using clean install
+npm ci
 
 # Launch the local development server
 ng serve --open
@@ -127,7 +130,6 @@ Ensure your local settings match this signature:
     "ExpiryInMinutes": 60
   }
 }
-
 ```
 
 ### Frontend Environment (`environment.development.ts`)
@@ -135,9 +137,8 @@ Ensure your local settings match this signature:
 ```typescript
 export const environment = {
   production: false,
-  apiUrl: 'https://localhost:7001/api'
+  apiUrl: "http://localhost:5118/api",
 };
-
 ```
 
 ---
@@ -204,7 +205,9 @@ Distributed under the **MIT License**. See the [LICENSE](https://www.google.com/
 
 ## 🧑‍💻 Contact & Acknowledgments
 
-* Project Link: [https://github.com/yourusername/your-repo-name](https://www.google.com/search?q=https://github.com/yourusername/your-repo-name)
-* Special thanks to the [PrimeNG](https://primeng.org/) team for their beautiful UI kit.
+- Project Link: [https://github.com/yourusername/your-repo-name](https://github.com/yourusername/your-repo-name)
+- Special thanks to the [PrimeNG](https://primeng.org/) team for their beautiful UI kit.
+
+```
 
 ```
