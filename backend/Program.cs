@@ -1,3 +1,6 @@
+using Microsoft.EntityFrameworkCore;
+using Backend.Infrastructure;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
@@ -11,6 +14,10 @@ builder.Services.AddCors(options =>
                         .AllowAnyMethod()
                         .AllowAnyHeader());
 });
+
+var connectionString = builder.Configuration.GetConnectionString("DefaultConnection");
+
+builder.Services.AddDbContext<MyDbContext>(options => options.UseNpgsql(connectionString));
 
 builder.Services.AddControllers();
 
